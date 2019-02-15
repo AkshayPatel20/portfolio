@@ -1,0 +1,29 @@
+.project-time{
+    margin-top: 40px;
+    background-color: white;
+}
+
+.proj-time-img{
+    height: 320px;
+    width: 450px;
+}
+
+.visit-link-resume{
+    font-size:12px;
+    text-decoration:none;
+    color: white;
+    border:#FED766 2px solid;
+    padding:10px 40px;
+    border-radius:25px;
+    z-index: 4;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+    right:20px;
+  }
+
+.visit-link-resume:hover{
+    background-color: #303333;
+    color: #FED766;
+    padding: 10px 50px;
+}
+ 

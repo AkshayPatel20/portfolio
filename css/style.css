@@ -1,0 +1,273 @@
+.icon-block {
+  padding: 0 15px;
+}
+
+.icon-block .material-icons {
+	font-size: inherit;
+}
+
+*{
+  margin:0;
+  padding:0;
+}
+
+body{
+  margin:0;
+  overflow-x: hidden;
+}
+
+#showcase{
+  background-size:cover;
+  background-position:center;
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:0 20px;
+}
+
+#showcase h2{
+  line-height:1.2;
+  top: 26%;
+  position: absolute;
+  font-weight: bolder;
+  color: white;
+  z-index: 4;
+}
+
+#showcase p{
+  font-size:16px;
+  z-index: 4;
+  margin-top: 120px;
+  color: rgb(93%, 94%, 87%);
+}
+
+#showcase .button{
+  font-size:16px;
+  text-decoration:none;
+  color: white;
+  border:#FED766 2px solid;
+  padding:10px 40px;
+  border-radius:25px;
+  margin-top:380px;
+  z-index: 4;
+  font-weight: bold;
+  transition: 0.3s ease-in-out;
+}
+
+#showcase .button:hover{
+  background-color: #FED766;
+  color: #303333;
+}
+
+.window
+{
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(48%, 52%, 54%);
+    opacity: 0.2;
+}
+
+.ityped-cursor {
+    opacity: 1;
+    -webkit-animation: blink 0.3s infinite;
+    -moz-animation: blink 0.3s infinite;
+    animation: blink 0.3s infinite;
+    animation-direction: alternate;
+}
+
+@keyframes blink {
+    100% {
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes blink {
+    100% {
+        opacity: 0;
+    }
+}
+
+@-moz-keyframes blink {
+    100% {
+        opacity: 0;
+    }
+}
+
+.light{
+  text-align: center;
+}
+
+.heading{
+  margin-top: 100px;
+  font-weight: bolder;
+  text-align: center;
+  color: #252A30;
+}
+
+.project-section{
+  background-color: #EEEEEE;
+  padding-top: 2px;
+}
+
+.sub-title{
+  text-align: center;
+  font-size: 20px;
+  padding-top: 10px;
+  font-weight: lighter;
+}
+
+.sub-title a{
+  text-decoration: underline;
+  text-decoration-style: dotted;
+}
+
+.project-done{
+  font-size: 25px;
+  font-weight: bold;
+  padding-top: 70px;
+}
+
+.project-image{
+  height: 320px;
+  width: 550px;
+  margin-top: 50px;
+  border-radius: 15px;
+}
+
+.project-work{
+  font-weight: bolder;
+  font-size: 16px;
+  color: #D4B65C;
+}
+
+.project-desc{
+  text-align: left;
+  color: #A8B5BA;
+}
+
+.visit-link{
+  font-size:12px;
+  text-decoration:none;
+  color: #303333;
+  border:#FED766 2px solid;
+  padding:10px 40px;
+  border-radius:25px;
+  margin-top:380px;
+  z-index: 4;
+  font-weight: bold;
+  transition: 0.3s ease-in-out;
+}
+
+.visit-link:hover{
+    background-color: #303333;
+    color: #FED766;
+    padding: 10px 50px;
+}
+
+.line{
+  margin-top: 70px;
+  margin-bottom: 70px;
+  border-top: 1px solid #D6E1E5;
+  border-radius: 25px;
+}
+
+.load{
+  font-size:12px;
+  text-decoration:none;
+  color: #303333;
+  border:#FED766 2px solid;
+  padding:10px 40px;
+  border-radius:25px;
+  z-index: 4;
+  font-weight: bold;
+  transition: 0.3s ease-in-out;
+  text-align: center;
+}
+
+.load:hover{
+    background-color: #303333;
+    color: #FED766;
+    padding: 10px 50px;
+}
+
+.language-section{
+  background-color: white;
+  padding-bottom: 100px;
+}
+
+.lang-head{
+  font-size: 24px;
+  font-weight: bold;
+  color: #252A30;
+}
+
+.foo{
+  background-color: #252A30;
+}
+
+.subdesign{
+  margin-left: 30px;
+  margin-top: 10px;
+}
+
+.back-to-top
+{
+    position: fixed;
+    z-index: 500 !important;
+    right: 20px;
+    bottom: 4em;
+
+    width: 50px;
+    height: 45px;
+    padding: 1em;
+    border-radius: 50%;
+    background-color: #c33764;
+    color: white;
+}
+
+.back-to-top:hover
+{
+    background-color: #777;
+    color: white;
+}
+
+@media only screen and (max-width: 600px) {
+
+  #showcase h2{
+    line-height:1.2;
+    top: 3%;
+    position: absolute;
+    font-weight: bolder;
+    color: white;
+    z-index: 4;
+  }
+
+  .project-image{
+    height: 240px;
+    width: 360px;
+    margin-top: 50px;
+    border-radius: 15px;
+  }
+
+  #myChart{
+    min-height: 300px;
+    width: 100%;
+  }
+
+}
+::-moz-scrollbar{
+    width: 12px;
+}
+::-moz-scrollbar-thumb{
+    background: linear-gradient(#000,#30ff00);
+}

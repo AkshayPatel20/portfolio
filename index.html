@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131362287-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-131362287-1');
+    </script>
+    
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Portfolio AP</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/timeline.css" type="text/css" rel="stylesheet"></link>
+  <link href="css/style2.css" type="text/css" rel="stylesheet" media="screen,projection"></link>
+
+
+  <script type="text/javascript">
+
+  function _(id){ return document.getElementById(id); }
+
+function submitForm(){
+	_("mybtn").disabled = true;
+	_("status").innerHTML = 'please wait ...';
+	var formdata = new FormData();
+	formdata.append( "detail_name", _("detail_name").value );
+	formdata.append( "detail_email", _("detail_email").value );
+	formdata.append( "detail_number", _("detail_number").value );
+  formdata.append( "detail_website", _("detail_website").value );
+  formdata.append( "detail_desc", _("detail_desc").value );
+	var ajax = new XMLHttpRequest();
+	ajax.open( "POST", "https://lightless-tumble.000webhostapp.com/php/app_register.php");
+	ajax.onreadystatechange = function() {
+		if(ajax.readyState == 4 && ajax.status == 200) {
+			if(ajax.responseText == "success"){
+				_("my_form").innerHTML = '<h5>Thank you '+_("detail_name").value+', for your interest in my Portfolio';
+			} else {
+				_("status").innerHTML = ajax.responseText;
+				_("mybtn").disabled = false;
+			}
+		}
+	}
+	ajax.send( formdata );
+}
+
+  </script>
+
+
+
+</head>
+<body onload='responsiveVoice.speak("Hello Friend! Welcome to My Portfolio");' type='button' value='🔊 Play'>
+
+  <header id="showcase" style="background-image: url('img/landing.png');">
+    <h2>Hi, I'm Akshay. I design & build<br/><span class="ityped"></span></h2>
+    <a href="#footer" class="button">Yes, I'm Available For Hire</a>
+    <p>Learn more about what I do<br><a href="#hstart"><i class="material-icons" style="font-weight:bolder;">keyboard_arrow_down</i></a></p>
+    <div class="window" id="particles-js"></div>
+  </header>
+
+  <div class="container">
+    <div class="col m12 s12">
+        <h4 class="heading" id="hstart">My Expertise</h4>
+    </div>
+  </div>
+
+  <div class="container" style="margin-bottom:50px;">
+    <div class="section">
+
+      <!--   Icon Section   -->
+      <div class="row">
+        <div class="col s12 m3">
+          <div class="icon-block">
+            <h2 class="center light-blue-text"><i class="material-icons">network_check</i></h2>
+            <h5 class="center"><b>Fast</b></h5>
+
+            <p class="light">Fast load times and lag free interaction, my highest priority.</p>
+          </div>
+        </div>
+
+        <div class="col s12 m3">
+          <div class="icon-block">
+            <h2 class="center light-blue-text"><i class="material-icons">phonelink</i></h2>
+            <h5 class="center"><b>Responsive</b></h5>
+
+            <p class="light">My layouts will work on any device, big or small.</p>
+          </div>
+        </div>
+
+        <div class="col s12 m3">
+          <div class="icon-block">
+            <h2 class="center light-blue-text"><i class="material-icons">settings</i></h2>
+            <h5 class="center"><b>Dynamic</b></h5>
+
+            <p class="light">Websites don't have to be static, I love making pages come to life.</p>
+          </div>
+        </div>
+
+        <div class="col s12 m3">
+          <div class="icon-block">
+            <h2 class="center light-blue-text"><i class="material-icons">settings</i></h2>
+            <h5 class="center"><b>Apps</b></h5>
+
+            <p class="light">I can Build Android Apps That easly Your work.</p>
+          </div>
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </div>
+
+<div class="project-section">
+
+  <div class="container">
+    <div class="col m12 s12">
+        <h4 class="heading">Personal Projects</h4>
+        <p class="sub-title">Want to see more examples?<a href="mailto:info@akshaypatel.cf"> Email Me.</a></p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+
+      <div class="col m5 s12">
+        <p class="project-done">Early Bird Clothing</p>
+        <p class="project-work">Full Stack Developer</p><br>
+        <p class="project-desc">Early Bird is a online Clothing Store where you can buy best trending cloths in minimum price.</p><br>
+        <a href="http://earlybird-clothing.000webhostapp.com/" class="visit-link" target="_blank">VISIT WEBSITE</a>
+      </div>
+
+      <div class="col m6 offset-m1 s12">
+        <img src="img/earlybird.png" class="project-image materialboxed">
+      </div>
+
+    </div><!--first row close-->
+
+    <hr class="line">
+
+    <div class="row" style="margin-top:-30px;">
+
+      <div class="col m6 s12">
+        <img src="img/nmitd-apps.png" class="project-image materialboxed">
+      </div>
+
+      <div class="col m5 s12 offset-m1">
+        <p class="project-done">NMITD College App</p>
+        <p class="project-work">Full Stack Developer</p><br>
+        <p class="project-desc">NMITD is a college app.where can find all the think about collegesuch as(syallbus,notice board,gallery,video gallery,teacher info,help chat,testimonal) and much more.</p><br>
+        <a href="https://drive.google.com/open?id=1IKYMfxE72GIvs6T-I4VRKJlL4ca2ye27" class="visit-link" target="_blank">DOWNLOAD APP</a>
+      </div>
+
+
+    </div><!--second row close-->
+
+    <div class="row load-class" style="margin-top:60px;">
+      <div class="col m12 s12">
+        <h2 class="load">LOAD MORE</h2>
+      </div>
+    </div>
+
+    <hr class="line more">
+
+      <div class="row more" style="margin-top:-30px;">
+
+        <div class="col m5 s12">
+          <p class="project-done">ASRK Music</p>
+          <p class="project-work">Full Stack Developer</p><br>
+          <p class="project-desc">ASRK Music is a online music website where you can listen and download all type on music on one click.</p><br>
+          <a href="http://asrk-music.000webhostapp.com" class="visit-link">VISIT WEBSITE</a>
+        </div>
+
+        <div class="col m6 offset-m1 s12">
+          <img src="img/asr-music.png" class="project-image materialboxed">
+        </div>
+
+      </div><!--third row close-->
+
+    <div><!--container close close-->
+
+
+</div><!--project section div close-->
+</div>
+</div>
+<div class="container">
+
+  <div class="row">
+
+    <div class="col m12 s12">
+      <h4 class="heading">All Project Done In MCA</h4>
+    </div>
+
+  </div><!--row close-->
+
+</div>
+<p class="hide-on-med-and-up"><i class="material-icons">error</i> For Accessing all project Visit Site From Destop.</p>
+
+<div class="container project-time hide-on-small-only">
+  <div class="timeline-container timeline-theme-1">
+    <div class="timeline js-timeline">
+      <div data-time="SEM V">
+       <div class="row">
+          <div class="col m7 s7"><img src="img/nmitd-apps.png" class="proj-time-img materialboxed"></div>
+          <div class="col m5 s5"><p class="project-done">NMITD College App</p>
+            <p class="project-work">Full Stack Developer</p><br>
+            <p class="project-desc">NMITD is a college app.where can find all the think about collegesuch as(syallbus,notice board,gallery,video gallery,teacher info,help chat,testimonal) and much more.</p><br>
+            <a href="https://drive.google.com/open?id=1IKYMfxE72GIvs6T-I4VRKJlL4ca2ye27" class="visit-link" target="_blank">DOWNLOAD APP</a></div>
+       </div><!--close row-->
+      </div>
+      <div data-time="SEM IV">
+        <div class="row">
+          <div class="col m7 s7"><img src="img/movie-book.png" class="proj-time-img materialboxed"></div>
+          <div class="col m5 s5"><p class="project-done">AP CINEMAS</p>
+            <p class="project-work">Full Stack Developer</p><br>
+            <p class="project-desc">AP CINEMAS is a movie review and movie booking website.where you can book movie ticket and watch latest movies trailers.</p><br>
+            <a href="https://github.com/AkshayPatel20/movie-booking-website/tree/master/moviebookingsystem" class="visit-link" target="_blank">GITHUB LINK</a></div>
+       </div><!--close row-->
+      </div>
+      <div data-time="SEM III">
+        <div class="row">
+          <div class="col m7"><img src="img/lib.png" class="proj-time-img materialboxed"></div>
+          <div class="col m5"><p class="project-done">LIBRARY MANAGEMENT SYSTEM</p>
+            <p class="project-work">JAVA Developer</p><br>
+            <p class="project-desc">Library Management Sytem is library software.Develop to ease the work of library staff help them to mantain records of the books and students.</p><br>
+            <a href="https://github.com/AkshayPatel20/Library-Management-System" class="visit-link" target="_blank">GITHUB LINK</a></div>
+       </div><!--close row-->
+      </div>
+      <div data-time="SEM II">
+        <div class="row">
+          <div class="col m7 s7"><img src="img/asr-music.png" class="proj-time-img materialboxed"></div>
+          <div class="col m5 s5"><p class="project-done">ASRK MUSIC</p>
+            <p class="project-work">Full Stack Developer</p><br>
+            <p class="project-desc">ASRK Music is a online music website where you can listen and download all type on music on one click.</p><br>
+            <a href="http://asrk-music.000webhostapp.com" class="visit-link" target="_blank">VISIT WEBSITE</a></div>
+       </div><!--close row-->
+      </div>
+      <div data-time="SEM I">
+        <div class="row">
+          <div class="col m7 s7"><img src="img/earlybird.png" class="proj-time-img materialboxed"></div>
+          <div class="col m5 s5"><p class="project-done">EARLY BIRD CLOTHING</p>
+            <p class="project-work">Full Stack Developer</p><br>  
+            <p class="project-desc">Early Bird is a online Clothing Store where you can buy best trending cloths in minimum price.</p><br>
+            <a href="http://earlybird-clothing.000webhostapp.com/" class="visit-link" target="_blank">VISIT WEBSITE</a></div>
+       </div><!--close row-->
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="language-section">
+
+  <div class="container">
+
+    <div class="row">
+
+      <div class="col m12 s12">
+        <h4 class="heading">My Skills</h4>
+      </div>
+
+    </div><!--row close-->
+
+    <div class="row">
+      <div class="col m12 s12">
+
+        <canvas id="myChart"></canvas>
+
+      </div>
+    </div><!--row close-->
+
+  </div>
+
+</div><!--Lanaguage Section end-->
+
+  <a href="#" class="back-to-top pulse"><i class="material-icons" style="margin-top:-5px;margin-left:-2px;">keyboard_arrow_up</i></a>
+  
+    <footer class="page-footer foo" id="footer">
+     <div class="container">
+       <div class="row">
+         <div class="col l6 s12">
+           <h5 class="white-text" style="text-weight:bolder;">Want to work together?</h5>
+           <p class="grey-text text-lighten-4">I'm currently accepting new projects and would love to hear about yours. Please take a few minutes to tell me about it.<br><br>After you introduce yourself and your project, I'll get in touch with you to schedule a time to chat. You should expect to hear from me in a day or so.</p><br><br>
+           <!-- <a href="https://drive.google.com/open?id=1-qUDLZQyDt24dNtAnfx9QGEPzIELfiSB" class="visit-link-resume" target="_blank">View Resume</a> -->
+           <p>Email: <span class="light-blue-text">info@akshaypatel.cf</span></p>
+         </div>
+         <form id="my_form" onsubmit="submitForm(); return false;">
+         <div class="col l4 offset-l2 s12">
+           <h5 class="white-text" style="font-size:22px;">Ok, just a few quick questions.</h5>
+             <div class="input-field col s6">
+               <input id="detail_name" type="text" class="validate" required>
+               <label for="last_name">Name*</label>
+             </div>
+             <div class="input-field col s6">
+               <input id="detail_email" type="email" class="validate" required>
+               <label for="email">Email*</label>
+             </div>
+             <div class="input-field col s6">
+               <input id="detail_number" type="text" class="validate" required title="Invalid Phone Number" pattern="[789][0-9]{9}">
+               <label for="last_name">Phone Number*</label>
+             </div>
+             <div class="input-field col s6">
+               <input id="detail_website" type="text" class="validate" required>
+               <label for="last_name">Website</label>
+             </div>
+             <div class="input-field col s12">
+                <textarea id="detail_desc" class="materialize-textarea" required></textarea>
+                <label for="textarea1">Tell Me About Project... What Is It?*</label>
+             </div>
+             <div class="col s12">
+               <input type="submit" value="Submit Your Project" id="mybtn" class="subdesign visit-link" style="background-color:#252A30;color:white;" /><br>
+               <span id="status"></span>
+             </div>
+         </div>
+        </form>
+       </div>
+     </div>
+     <div class="footer-copyright blue-grey darken-4">
+       <div class="container">
+        &copy; 2017 Handmade By Akshay Patel
+       <a class="grey-text text-lighten-4 right" href="#!"></a>
+       </div>
+     </div>
+
+   </footer>
+
+  
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/functions.js" type="text/javascript"></script>
+  <script type="text/javascript" src="js/ityped.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js" type="text/javascript"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+  <script src='https://code.responsivevoice.org/responsivevoice.js'></script>
+  <script src="js/timeline.js" type="text/javascript"></script>
+
+  <script type="text/javascript">
+    window.ityped.init(document.querySelector('.ityped'), {
+            strings : ['user interfaces.', 'web applications.','business websites.'],
+            loop : true
+        });
+  </script>
+
+  <script type="text/javascript">
+  particlesJS.load('particles-js', 'particles.json', function() {
+    console.log('callback - particles.js config loaded');
+  });
+  </script>
+
+
+  <script type="text/javascript">
+
+  var ctx = document.getElementById('myChart').getContext('2d');
+
+  //global options
+  Chart.defaults.global.defaultFontFamily = 'Lato';
+
+
+  var chart = new Chart(ctx, {
+      // The type of chart we want to create
+      type: 'bar',
+
+      // The data for our dataset
+      data: {
+          labels: ["HTML5", "CSS3", "JAVASCRIPT", "JQUERY", "PHP", "PHOTOSHOP", "SQL","CodeIgniter","Bootstrap"],
+          datasets: [{
+              label: "My Skills",
+              backgroundColor: 'rgb(97%, 82%, 40%)',
+              borderColor: 'rgb(97%, 82%, 40%)',
+              data: [90, 85, 60, 80, 75, 70, 75,70,95,0,100],
+          }]
+      },
+
+      // Configuration options go here
+      options: {
+        title :{
+          display:true,
+          text:'Programming Knowledge & Frameworks'
+        }
+      }
+  });
+
+  </script>
+
+  </body>
+</html>
